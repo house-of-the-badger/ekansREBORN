@@ -45,7 +45,7 @@ func save_score(user_id: String, score: int) -> void:
 		document = await firestore_collection.add(user_id, data)
 		print("Document created with ID: ", document.doc_name)
 		
-func update_player_data(user_id: String, username: String, avatar_id: int, avatar_img: String, avatar_color:String) -> void:
+func update_player_data(user_id: String, username: String, avatar_id: int, avatar_img: String) -> void:
 	var firestore_collection: FirestoreCollection = Firebase.Firestore.collection(COLLECTION_NAME_PLAYERS)
 	print(firestore_collection, "collection in database manager")
 	var document = await firestore_collection.get_doc(user_id)
@@ -55,7 +55,7 @@ func update_player_data(user_id: String, username: String, avatar_id: int, avata
 		document.add_or_update_field("username", username)
 		document.add_or_update_field("avatar_id", avatar_id)
 		document.add_or_update_field("avatar_img", avatar_img)
-		document.add_or_update_field("avatar_color", avatar_color)
+		#document.add_or_update_field("avatar_color", avatar_color)
 		var updated_document = await firestore_collection.update(document)
 		print("Updated document:", updated_document)
 	else:
