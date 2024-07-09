@@ -22,13 +22,15 @@ func _ready() -> void:
 
 #Spawn functions
 
-func spawn_tail(pos: Vector2, tails_to_add):
-	var head_position = head.position
-	for i in tails_to_add:
+func spawn_tail(pos: Vector2, tails_to_add: int):
+	var last_position = pos
+	for i in range(tails_to_add):
 		var tail: Tail = tail_scene.instantiate() as Tail
-		tail.position = pos + Vector2(head_position.x, (i + 9) * Global.CELL_SIZE)
+		tail.position = last_position
 		get_parent().add_child(tail)
 		tail_added.emit(tail)
+		# Update last_position for the next tail part to be positioned correctly
+		last_position -= Vector2(0, Global.CELL_SIZE)
 
 func spawn_food():
 	var spawn_point = get_random_spawn_point()

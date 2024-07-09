@@ -20,3 +20,9 @@ func _on_gameplay_decrease_snake_length():
 	new_snake_length -= 1
 	snake_length.text = "Snake Length: " + str(new_snake_length)
 	print(new_snake_length)
+
+
+func _on_gameplay_increase_snake_length():
+	new_snake_length += 3
+	snake_length.text = "Snake Length: " + str(new_snake_length)
+	print(new_snake_length)
