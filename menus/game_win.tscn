@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bc0gplf4ea5i7"]
 
-[ext_resource type="FontFile" uid="uid://djgm5dobe81rq" path="res://UI/fonts/Play-Bold.ttf" id="1_hocqh"]
 [ext_resource type="Script" path="res://menus/game_win.gd" id="1_v7bcu"]
+[ext_resource type="Theme" uid="uid://birea8mlkoq0q" path="res://UI/themes/default_theme.tres" id="2_v7tyb"]
 
 [node name="GameWin" type="CanvasLayer"]
 script = ExtResource("1_v7bcu")
@@ -12,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_v7tyb")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -42,27 +43,17 @@ size_flags_horizontal = 4
 [node name="LevelScore" type="Label" parent="Panel/HBoxContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.843137, 0.301961, 0.631373, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_hocqh")
-theme_override_font_sizes/font_size = 32
 text = "Level Score: 0"
 horizontal_alignment = 1
 
 [node name="TotalScore" type="Label" parent="Panel/HBoxContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.843137, 0.301961, 0.631373, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_hocqh")
-theme_override_font_sizes/font_size = 36
 text = "Total Score: 0"
 horizontal_alignment = 1
 
 [node name="HighScoreLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.92549, 0.65098, 0.784314, 1)
-theme_override_font_sizes/font_size = 28
 text = "New High Score!"
 horizontal_alignment = 1
 
@@ -73,18 +64,14 @@ theme_override_constants/v_separation = 20
 
 [node name="NextLevel" type="Button" parent="Panel/HBoxContainer/VBoxContainer/GridContainer2"]
 process_mode = 2
-custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.843137, 0.301961, 0.631373, 1)
-theme_override_fonts/font = ExtResource("1_hocqh")
 text = "Next Level"
 
 [node name="Quit" type="Button" parent="Panel/HBoxContainer/VBoxContainer/GridContainer2"]
 process_mode = 2
-custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.843137, 0.301961, 0.631373, 1)
-theme_override_fonts/font = ExtResource("1_hocqh")
 text = "Quit"
 
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/GridContainer2/NextLevel" to="." method="_on_next_level_pressed"]

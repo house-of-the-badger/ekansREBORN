@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1720522180
+::res://::1720529205
 export_presets.cfg::TextFile::-1::1720520900::0::1::::<><>::
 icon.svg::CompressedTexture2D::5646316598172133819::1720520900::1720520900::1::::<><>::
 README.md::TextFile::-1::1720520900::0::1::::<><>::
@@ -229,12 +229,12 @@ snake-head-up-down.png::CompressedTexture2D::4004867236934753912::1720520900::17
 snake-head-up.png::CompressedTexture2D::402336317464703618::1720520900::1720520900::1::::<><>::
 snake-tail.png::CompressedTexture2D::2415559638780582748::1720520900::1720520900::1::::<><>::
 watermelon.png::CompressedTexture2D::1050571241788217567::1720520900::1720520900::1::::<><>::
-::res://menus/::1720521873
+::res://menus/::1720529199
 Avatar_selection.gd::GDScript::-1::1720521690::0::1::::AvatarSelection<>Control<>::
 Avatar_selection.tscn::PackedScene::958840474859546549::1720520900::0::1::::<><>::res://menus/Avatar_selection.gd<>uid://djgm5dobe81rq::::res://UI/fonts/Play-Bold.ttf<>uid://b8it623mylgpj::::res://UI/fonts/Play-Regular.ttf<>res://menus/get_avatars.gd
 gameover.gd::GDScript::-1::1720520900::0::1::::GameOver<>CanvasLayer<>::
 game_win.gd::GDScript::-1::1720520900::0::1::::GameWin<>CanvasLayer<>::
-game_win.tscn::PackedScene::2578799490489713736::1720520900::0::1::::<><>::uid://djgm5dobe81rq::::res://UI/fonts/Play-Bold.ttf<>res://menus/game_win.gd
+game_win.tscn::PackedScene::2578799490489713736::1720529199::0::1::::<><>::res://menus/game_win.gd<>uid://birea8mlkoq0q::::res://UI/themes/default_theme.tres
 get_avatars.gd::GDScript::-1::1720520900::0::1::::GetAvatars<>Node<>::
 hud.gd::GDScript::-1::1720520900::0::1::::HUD<>CanvasLayer<>::
 login.gd::GDScript::-1::1720520900::0::1::::<>Control<>::
@@ -242,7 +242,7 @@ Login.tscn::PackedScene::4675477084245041164::1720520900::0::1::::<><>::res://me
 nav_bar.tscn::PackedScene::3287938812204525481::1720520900::0::1::::<><>::
 pause_menu.gd::GDScript::-1::1720520900::0::1::::PauseMenu<>CanvasLayer<>::
 sign-up.gd::GDScript::-1::1720520900::0::1::::SignUp<>Control<>::
-sign-up.tscn::PackedScene::2822807125659096026::1720521873::0::1::::<><>::res://menus/sign-up.gd<>uid://ctifcjlpycxgv::::res://Assets/avatar_11.png<>uid://djgm5dobe81rq::::res://UI/fonts/Play-Bold.ttf<>uid://b8it623mylgpj::::res://UI/fonts/Play-Regular.ttf
+sign-up.tscn::PackedScene::2822807125659096026::1720523355::0::1::::<><>::uid://birea8mlkoq0q::::res://UI/themes/default_theme.tres<>res://menus/sign-up.gd<>uid://ctifcjlpycxgv::::res://Assets/avatar_11.png
 start_screen.gd::GDScript::-1::1720520900::0::1::::StartScreen<>CanvasLayer<>::
 start_screen.tscn::PackedScene::878678984040726175::1720521873::0::1::::<><>::res://menus/start_screen.gd
 user_profile.gd::GDScript::-1::1720520900::0::1::::<>Control<>::
@@ -265,5 +265,6 @@ game_over_UI.tscn::PackedScene::4532090424552525749::1720520900::0::1::::<><>::r
 pause_menu_UI.tscn::PackedScene::1969598068550865183::1720520900::0::1::::<><>::res://menus/pause_menu.gd<>uid://bgquwbyit1vjq::::res://UI/fonts/Fontspring-DEMO-riffic-ultrabold.ttf
 ::res://UI/fonts/::1720522233
 PressStart2P-Regular.ttf::FontFile::5215172588916738381::1720522233::1720522233::1::::<><>::
-::res://UI/themes/::1720522106
+::res://UI/themes/::1720523355
+default_theme.tres::Theme::2983270474909372562::1720523355::0::1::::<><>::uid://cgkjeo73n06m8::::res://UI/fonts/PressStart2P-Regular.ttf
 hud_ui.tscn::PackedScene::603076726695459453::1720520900::0::1::::<><>::res://menus/hud.gd<>uid://dkb11wc1qkuvq::::res://UI/fonts/Fontspring-DEMO-riffic-ultrabold.ttf

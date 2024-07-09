@@ -1,2 +1,8 @@
-res://menus/sign-up.tscn
+res://menus/game_win.tscn
 res://UI/themes/default_theme.tres
+res://menus/start_screen.tscn
+res://menus/sign-up.tscn
+res://UI/game_over_UI.tscn
+res://gameplay/gameplay.gd
+res://gameplay/gameplay.tscn
+res://UI/themes/hud_ui.tscn
