@@ -4,7 +4,7 @@ class_name AvatarSelection extends Control
 
 var avatar_id:int
 var avatar_img:String
-var avatar_color:String
+#var avatar_color:String
 
 func _ready():
 	print("i'm in avatar selection")
@@ -21,7 +21,7 @@ func update_data():
 	
 	if auth.localid:
 		print(auth.localid, "local id in avatar selection")
-		await DatabaseManager.update_player_data(auth.localid, %Username.text, avatar_id, avatar_img, avatar_color)
+		await DatabaseManager.update_player_data(auth.localid, %Username.text, avatar_id, avatar_img)
 		%UsernameStateLabel.text = "Your snake was updated"
 	else:
 		print("Error: User not authenticated")
@@ -61,7 +61,7 @@ func _on_avatar_6_pressed():
 	print("selected avatar 06")
 	set_avatar(6, "path/to/avatar_06.png", "pink")
 
-func set_avatar(id:int, img_path:String, avatar_color:String):
+func set_avatar(id:int, img_path:String, _avatar_color:String):
 	avatar_id = id
 	avatar_img = img_path
 	
