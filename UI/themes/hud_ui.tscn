@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://iuet56tbrxsf"]
+[gd_scene load_steps=5 format=3 uid="uid://iuet56tbrxsf"]
 
 [ext_resource type="Script" path="res://menus/hud.gd" id="1_8vn3h"]
-[ext_resource type="FontFile" uid="uid://dkb11wc1qkuvq" path="res://UI/fonts/Fontspring-DEMO-riffic-ultrabold.ttf" id="2_phqnu"]
 
 [sub_resource type="Theme" id="Theme_imh0j"]
-default_font = ExtResource("2_phqnu")
 
 [sub_resource type="Theme" id="Theme_go0dn"]
 default_font_size = 16

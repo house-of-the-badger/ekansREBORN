@@ -26,8 +26,6 @@ script = ExtResource("1_y073f")
 textures = Array[Texture]([ExtResource("2_f5o51")])
 metadata/_edit_horizontal_guides_ = [-7499.0]
 
-[node name="HUD" parent="." instance=ExtResource("3_n5m7n")]
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
@@ -51,7 +49,7 @@ position = Vector2(0, 64)
 
 [node name="LowerRight" type="Marker2D" parent="Bounds"]
 unique_name_in_owner = true
-position = Vector2(474, 962)
+position = Vector2(480, 960)
 
 [node name="Spawner" type="Node2D" parent="." node_paths=PackedStringArray("bounds")]
 unique_name_in_owner = true
@@ -59,7 +57,7 @@ script = ExtResource("5_rex01")
 bounds = NodePath("../Bounds")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(237, 479)
+position = Vector2(240, 480)
 script = ExtResource("8_q3r24")
 
 [node name="MouseSpawnTimer" type="Timer" parent="."]
@@ -76,7 +74,8 @@ script = ExtResource("9_c1va4")
 wait_time = 0.5
 script = ExtResource("10_n0qen")
 
-[connection signal="decrease_snake_length" from="." to="HUD" method="_on_gameplay_decrease_snake_length"]
+[node name="HUD" parent="." instance=ExtResource("3_n5m7n")]
+
 [connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="melon_eaten" from="Head" to="." method="_on_head_melon_eaten"]
