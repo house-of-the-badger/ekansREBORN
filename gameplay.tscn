@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://h3kht00shlwr"]
+[gd_scene load_steps=14 format=3 uid="uid://b58fg43qcwr4x"]
 
 [ext_resource type="Script" path="res://gameplay/gameplay.gd" id="1_r7d3o"]
 [ext_resource type="Texture2D" uid="uid://cgwqd5x5g07yl" path="res://gameplay/sprites/poop.png" id="2_f5o51"]
@@ -77,10 +77,14 @@ script = ExtResource("9_c1va4")
 wait_time = 0.5
 script = ExtResource("10_n0qen")
 
+
+
 [node name="HUD" parent="." instance=ExtResource("3_n5m7n")]
 
 [connection signal="decrease_snake_length" from="." to="HUD" method="_on_gameplay_decrease_snake_length"]
 [connection signal="increase_snake_length" from="." to="HUD" method="_on_gameplay_increase_snake_length"]
+
+
 [connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="melon_eaten" from="Head" to="." method="_on_head_melon_eaten"]

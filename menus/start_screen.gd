@@ -9,7 +9,7 @@ const tutorial_scene:PackedScene = preload("res://menus/tutorial.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	start.pressed.connect(_on_start_button_pressed)
+	#start.pressed.connect(_on_start_button_pressed)
 	var high_score:int = Global.save_data.high_score
 	score.text = "High Score: " + str(high_score)
 

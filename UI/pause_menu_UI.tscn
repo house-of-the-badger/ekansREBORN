@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://3cc80imerot0"]
 
 [ext_resource type="Script" path="res://menus/pause_menu.gd" id="1_eeqwu"]
-[ext_resource type="Texture2D" uid="uid://bmirbvh25s7n5" path="res://Assets/cogwheel.png" id="2_1lmqr"]
+[ext_resource type="Texture2D" uid="uid://jtk28m7gtmmy" path="res://Assets/cogwheel.png" id="2_1lmqr"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
