@@ -1,5 +1,6 @@
 class_name Levels
 
+
 const Database = {
 	"level1": {
 		"name": "level1",
@@ -16,7 +17,7 @@ const Database = {
 		},
 		"best_score": 0,
 		"unlocked": true,
-		"unlocks": "level2"
+		"unlocks": "level2",
 	},
 	"level2": {
 		"name": "level2",
@@ -33,7 +34,7 @@ const Database = {
 		},
 		"best_score": 0,
 		"unlocked": false,
-		"unlocks": "level3"
+		"unlocks": "level3",
 	},
 	"level3": {
 		"name": "level3",
@@ -50,7 +51,7 @@ const Database = {
 		},
 		"best_score": 0,
 		"unlocked": false,
-		"unlocks": "level4"
+		"unlocks": "level4",
 	},
 	"level4": {
 		"name": "level4",
@@ -67,7 +68,7 @@ const Database = {
 		},
 		"best_score": 0,
 		"unlocked": false,
-		"unlocks": "level5"
+		"unlocks": "level5",
 	},
 	"level5": {
 		"name": "level5",
@@ -84,7 +85,7 @@ const Database = {
 		},
 		"best_score": 0,
 		"unlocked": false,
-		"unlocks": "level6"
+		"unlocks": "level6",
 	},
 	"level6": {
 		"name": "level6",
