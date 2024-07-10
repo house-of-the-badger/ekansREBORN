@@ -6,3 +6,10 @@ res://UI/game_over_UI.tscn
 res://gameplay/gameplay.gd
 res://gameplay/gameplay.tscn
 res://UI/themes/hud_ui.tscn
+res://gameplay/food.tscn
+res://gameplay/head.tscn
+res://gameplay/melon.tscn
+res://gameplay/mouse.tscn
+res://gameplay/prune.tscn
+res://gameplay/snake_parts.tscn
+res://menus/nav_bar.tscn

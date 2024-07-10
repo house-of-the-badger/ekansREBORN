@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://mrvyj7lo3onn"]
+[gd_scene load_steps=3 format=3 uid="uid://mrvyj7lo3onn"]
 
 [ext_resource type="Script" path="res://menus/start_screen.gd" id="1_3x0iu"]
+[ext_resource type="Theme" uid="uid://birea8mlkoq0q" path="res://UI/themes/default_theme.tres" id="2_yi0hg"]
 
 [node name="StartScreen" type="CanvasLayer"]
 script = ExtResource("1_3x0iu")
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_yi0hg")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -28,19 +30,14 @@ alignment = 1
 
 [node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.792157, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 4
-theme_override_constants/shadow_offset_y = 4
-theme_override_font_sizes/font_size = 84
-text = "SNAKE 
-GAME"
+theme = ExtResource("2_yi0hg")
+theme_override_font_sizes/font_size = 50
+text = "EKANS"
 horizontal_alignment = 1
 
 [node name="ScoreLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
 text = "High Score: 0"
 horizontal_alignment = 1
 
@@ -53,15 +50,13 @@ theme_override_constants/v_separation = 20
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.772549, 0, 1)
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("2_yi0hg")
 text = "Start"
 
 [node name="QuitButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
 text = "Quit"
 
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/GridContainer/StartButton" to="." method="_on_start_button_pressed"]
