@@ -1,6 +1,7 @@
 class_name Gameplay extends Node2D
 
 signal decrease_snake_length
+signal increase_snake_length
 
 const gameover_scene:PackedScene = preload("res://UI/game_over_UI.tscn")
 const pausemenu_scene:PackedScene = preload("res://UI/pause_menu_UI.tscn")
@@ -176,7 +177,8 @@ func _on_mouse_spawn_timer_timeout():
 	return spawner.spawn_enemy()
 
 func _on_head_mouse_eaten():
-	spawner.spawn_tail(snake_parts[snake_parts.size()-1].last_position, 3)
+	spawner.call_deferred("spawn_tail", snake_parts[snake_parts.size()-1].last_position, 3)
+	increase_snake_length.emit()
 
 func _on_poop_despawn_timer_timeout():
 	if poop_array.size() > 1:
@@ -191,8 +193,7 @@ func _on_head_melon_eaten():
 		
 
 func spawn_on_half_length():
-
-	if snake_parts.size() == level.starting_length / 2:
+	if snake_parts.size() <= level.starting_length / 2:
 		spawner.spawn_melon()
 		melon_spawn_timer.stop()
 
