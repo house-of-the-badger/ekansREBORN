@@ -22,13 +22,15 @@ func _ready() -> void:
 
 #Spawn functions
 
-func spawn_tail(pos: Vector2, tails_to_add):
-	var head_position = head.position
-	for i in tails_to_add:
+func spawn_tail(pos: Vector2, tails_to_add: int):
+	var last_position = pos
+	for i in range(tails_to_add):
 		var tail: Tail = tail_scene.instantiate() as Tail
-		tail.position = pos + Vector2(head_position.x, (i + 9) * Global.CELL_SIZE)
+		tail.position = last_position
 		get_parent().add_child(tail)
 		tail_added.emit(tail)
+		# Update last_position for the next tail part to be positioned correctly
+		last_position -= Vector2(0, Global.CELL_SIZE)
 
 func spawn_food():
 	var spawn_point = get_random_spawn_point()
@@ -98,13 +100,13 @@ func prevents_spawn_melon():
 
 func get_random_spawn_point() -> Vector2:
 	var spawn_point = Vector2.ZERO
-	spawn_point.x = randf_range(bounds.x_min + Global.CELL_SIZE, bounds.x_max - Global.CELL_SIZE)
-	spawn_point.y = randf_range(bounds.y_min + Global.CELL_SIZE, bounds.y_max - Global.CELL_SIZE)
-	return spawn_point
+	spawn_point.x = randf_range(bounds.x_min, bounds.x_max)
+	spawn_point.y = randf_range(bounds.y_min, bounds.y_max)
+	return align_to_grid(spawn_point)
 	
 func align_to_grid(point: Vector2) -> Vector2:
-	point.x = floorf(point.x / Global.CELL_SIZE) * Global.CELL_SIZE
-	point.y = floorf(point.y / Global.CELL_SIZE) * Global.CELL_SIZE
+	point.x = floorf(point.x / Global.CELL_SIZE) * Global.CELL_SIZE + Global.CELL_SIZE / 2
+	point.y = floorf(point.y / Global.CELL_SIZE) * Global.CELL_SIZE + Global.CELL_SIZE / 2
 	return point
 
 func despawn_last_node_in_group(group_name):

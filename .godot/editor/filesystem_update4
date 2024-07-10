@@ -1,2 +1,7 @@
-res://menus/sign-up.tscn
+res://gameplay/gameplay.tscn
 res://UI/themes/default_theme.tres
+res://menus/start_screen.tscn
+res://menus/Avatar_selection.gd
+res://gameplay/bounds.gd
+res://autoloads/database_manager.gd
+res://export_presets.cfg
