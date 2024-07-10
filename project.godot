@@ -10,9 +10,12 @@ config_version=5
 
 [application]
 
-config/name="snake-test"
+config/name="ekanS"
 run/main_scene="res://menus/start_screen.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
+boot_splash/bg_color=Color(1, 1, 1, 1)
+boot_splash/image="res://Assets/house-of-the-badger-logo2-01.png"
+boot_splash/fullsize=false
 config/icon="res://icon.svg"
 
 [autoload]
@@ -26,6 +29,7 @@ DatabaseManager="*res://autoloads/database_manager.gd"
 window/size/viewport_width=480
 window/size/viewport_height=960
 window/stretch/mode="viewport"
+window/handheld/orientation=1
 
 [dotnet]
 
@@ -86,3 +90,4 @@ touch={
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
