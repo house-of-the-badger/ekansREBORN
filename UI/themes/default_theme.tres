@@ -1,14 +1,57 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://birea8mlkoq0q"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://birea8mlkoq0q"]
 
 [ext_resource type="FontFile" uid="uid://cgkjeo73n06m8" path="res://UI/fonts/PressStart2P-Regular.ttf" id="1_6lbnw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mvilr"]
+bg_color = Color(0.956863, 0.266667, 0.180392, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 60.0
+expand_margin_top = 12.0
+expand_margin_right = 60.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8b03b"]
+bg_color = Color(0.956863, 0.266667, 0.180392, 1)
+skew = Vector2(2.08165e-12, 2.08165e-12)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 60.0
+expand_margin_top = 12.0
+expand_margin_right = 60.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xtte"]
+bg_color = Color(0.956863, 0.266667, 0.180392, 0.870588)
+skew = Vector2(2.08165e-12, 2.08165e-12)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 60.0
+expand_margin_top = 12.0
+expand_margin_right = 60.0
+expand_margin_bottom = 12.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3x0bk"]
 bg_color = Color(0.596078, 0.729412, 0.596078, 1)
 
 [resource]
 default_font = ExtResource("1_6lbnw")
-default_font_size = 16
+default_font_size = 15
+Button/colors/font_color = Color(0.0392157, 0.117647, 0.117647, 1)
+Button/colors/font_hover_color = Color(0.0392157, 0.117647, 0.117647, 1)
+Button/colors/font_pressed_color = Color(0.0392157, 0.117647, 0.117647, 1)
+Button/styles/hover = SubResource("StyleBoxFlat_mvilr")
+Button/styles/normal = SubResource("StyleBoxFlat_8b03b")
+Button/styles/pressed = SubResource("StyleBoxFlat_2xtte")
 Label/colors/font_color = Color(0.0392157, 0.117647, 0.117647, 1)
 Label/colors/font_outline_color = Color(0.121569, 0.513726, 0.243137, 1)
+Label/constants/outline_size = 2
+Label/font_sizes/font_size = 18
 Label/styles/normal = null
 Panel/styles/panel = SubResource("StyleBoxFlat_3x0bk")
