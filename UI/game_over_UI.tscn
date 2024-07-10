@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5tm4qoj80lpt"]
+[gd_scene load_steps=4 format=3 uid="uid://b5tm4qoj80lpt"]
 
 [ext_resource type="Script" path="res://menus/gameover.gd" id="1_33y3e"]
+
+[sub_resource type="Theme" id="Theme_oiht0"]
+
 
 [sub_resource type="Theme" id="Theme_qo3rq"]
 
