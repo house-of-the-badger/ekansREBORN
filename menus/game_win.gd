@@ -12,9 +12,9 @@ func set_score(n:int):
 	else:
 		high_score.visible = false
 
-func _on_next_level_pressed():
-	Global.current_level = "level" + str(int(Global.current_level) + 1)
-	get_tree().reload_current_scene()
+#func _on_next_level_pressed():
+	#LevelsManager.current_level = "level" + str(int(LevelsManager.current_level) + 1)
+	#get_tree().reload_current_scene()
 	
 
 func _on_quit_pressed():

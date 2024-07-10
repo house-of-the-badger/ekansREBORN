@@ -4,6 +4,7 @@ var COLLECTION_NAME_PLAYERS = "players"
 
 # Called when the node enters the scene tree for the first time.
 func _ready(): 
+	print("sign up")
 	Firebase.Auth.signup_succeeded.connect(on_signup_succeeded)
 	Firebase.Auth.signup_failed.connect(on_signup_failed)
 

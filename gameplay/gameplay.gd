@@ -2,6 +2,7 @@ class_name Gameplay extends Node2D
 
 signal decrease_snake_length
 signal increase_snake_length
+signal level_won
 
 const gameover_scene:PackedScene = preload("res://UI/game_over_UI.tscn")
 const pausemenu_scene:PackedScene = preload("res://UI/pause_menu_UI.tscn")
@@ -38,7 +39,7 @@ var rotation_map = {
 }
 
 #creates an interval in snake movement
-var level = Levels.Database[Global.current_level]
+var level = Levels.Database[LevelsManager.current_level]
 var time_between_moves:float = 1000.0
 var time_since_last_move:float = 0
 var speed:float = level.speed
@@ -117,11 +118,12 @@ func update_snake():
 		speed += 300
 
 	if(snake_parts.size() <= 1): # waiting for win scene
-		#Global.current_level = "level" + str(int(Global.current_level) + 1)
+		#LevelManager.current_level = "level" + str(int(LevelManager.current_level) + 1)
 		#if not gameover_menu:
 		gamewin_screen = gamewin_scene.instantiate()
 		add_child(gamewin_screen)
 		gamewin_screen.set_score(score)
+		level_won.emit()
 	
 func _on_food_eaten():
 	detach_tail()
