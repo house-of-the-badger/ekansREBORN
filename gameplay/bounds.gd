@@ -17,12 +17,12 @@ func _ready() -> void: #void functions don't return a value. Printing the return
 
 func wrap_vector(v:Vector2) -> Vector2: #takes a Vector2 and returns a Vector2
 	if v.x > x_max:
-		return Vector2(x_min,v.y)
+		return Vector2((x_min + Global.CELL_SIZE / 2),v.y)
 	if v.x < x_min:
-		return Vector2(x_max,v.y)
+		return Vector2((x_max + Global.CELL_SIZE / 2),v.y)
 	if v.y > y_max:
-		return Vector2(v.x,y_min)
+		return Vector2(v.x,(y_min + Global.CELL_SIZE / 2))
 	if v.y < y_min:
-		return Vector2(v.x,y_max)
+		return Vector2(v.x,(y_max - Global.CELL_SIZE / 2))
 	return v
 

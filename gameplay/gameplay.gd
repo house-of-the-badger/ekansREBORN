@@ -36,7 +36,6 @@ var rotation_map = {
 	DIRECTION_DOWN: ROTATION_DOWN
 }
 
-
 #creates an interval in snake movement
 var level = Levels.Database[Global.current_level]
 var time_between_moves:float = 1000.0
@@ -122,10 +121,6 @@ func update_snake():
 		gamewin_screen = gamewin_scene.instantiate()
 		add_child(gamewin_screen)
 		gamewin_screen.set_score(score)
-		
-			#gameover_menu = gameover_scene.instantiate() as GameOver
-			#add_child(gameover_menu)
-			#gameover_menu.set_score(score)
 	
 func _on_food_eaten():
 	detach_tail()

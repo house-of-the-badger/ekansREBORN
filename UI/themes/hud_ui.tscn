@@ -1,4 +1,6 @@
+
 [gd_scene load_steps=5 format=3 uid="uid://iuet56tbrxsf"]
+
 
 [ext_resource type="Script" path="res://menus/hud.gd" id="1_8vn3h"]
 
@@ -34,7 +36,6 @@ theme_override_constants/margin_right = 10
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer"]
 layout_mode = 2
-theme = SubResource("Theme_go0dn")
 theme_override_constants/separation = 25
 alignment = 1
 metadata/_edit_use_anchors_ = true

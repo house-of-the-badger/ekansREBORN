@@ -4,6 +4,7 @@
 
 [sub_resource type="Theme" id="Theme_oiht0"]
 
+
 [sub_resource type="Theme" id="Theme_qo3rq"]
 
 [node name="GameOver" type="CanvasLayer"]
@@ -17,7 +18,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_oiht0")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -53,15 +53,12 @@ theme_override_constants/v_separation = 10
 [node name="ScoreLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer/GridContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
 text = "Score: 0"
 horizontal_alignment = 1
 
 [node name="HighScoreLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer/GridContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.92549, 0.65098, 0.784314, 1)
-theme_override_font_sizes/font_size = 28
 text = "New High Score!"
 horizontal_alignment = 1
 
@@ -75,15 +72,12 @@ theme_override_constants/v_separation = 20
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.348399, 0.800789, 0.965441, 1)
-theme_override_font_sizes/font_size = 24
 text = "Restart"
 
 [node name="QuitButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
 text = "Quit"
 
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/GridContainer/RestartButton" to="." method="_on_restart_button_pressed"]
