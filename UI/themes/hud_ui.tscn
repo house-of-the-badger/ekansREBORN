@@ -1,5 +1,7 @@
 
+
 [gd_scene load_steps=5 format=3 uid="uid://iuet56tbrxsf"]
+
 
 
 [ext_resource type="Script" path="res://menus/hud.gd" id="1_8vn3h"]

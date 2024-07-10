@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://3tgrwxb1f2ga"]
+
+[ext_resource type="Script" path="res://level_element.gd" id="1_yjeeg"]
+
+[node name="LevelElement" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yjeeg")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Level 1"
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = " Play "
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+text = "Best Score: 0"
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]

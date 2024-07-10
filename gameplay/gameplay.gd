@@ -14,6 +14,7 @@ var tail_scene:PackedScene = preload("res://gameplay/tail.tscn")
 @onready var bounds: Bounds = %Bounds as Bounds
 @onready var spawner: Spawner = %Spawner as Spawner
 @onready var hud = $HUD
+
 @onready var melon_spawn_timer = $MelonSpawnTimer
 
 @onready var camera_2d = $Camera2D
