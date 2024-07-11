@@ -1,7 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7u3oox3i75gi"]
+[gd_scene load_steps=7 format=3 uid="uid://b7u3oox3i75gi"]
 
 [ext_resource type="Script" path="res://menus/login.gd" id="1_4xrm4"]
-[ext_resource type="Texture2D" uid="uid://ctifcjlpycxgv" path="res://Assets/avatar_11.png" id="1_5p022"]
+[ext_resource type="Texture2D" uid="uid://cmcmcn1frjeiq" path="res://gameplay/sprites/Asset 7ekans-pixel-art.png" id="2_cx6yb"]
+
+[sub_resource type="Theme" id="Theme_eybqk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v12a3"]
+bg_color = Color(0.360784, 0.623529, 0.419608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.513726, 0.243137, 1)
+expand_margin_left = 20.0
+expand_margin_top = 15.0
+expand_margin_right = 20.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_77jrd"]
+bg_color = Color(0.121569, 0.513726, 0.243137, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.513726, 0.243137, 1)
+expand_margin_left = 20.0
+expand_margin_top = 15.0
+expand_margin_right = 20.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jye2k"]
+bg_color = Color(0.121569, 0.513726, 0.243137, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.513726, 0.243137, 1)
+expand_margin_left = 20.0
+expand_margin_top = 15.0
+expand_margin_right = 20.0
+expand_margin_bottom = 15.0
 
 [node name="Login" type="Control"]
 layout_mode = 3
@@ -39,7 +77,7 @@ theme_override_constants/separation = 10
 
 [node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_5p022")
+texture = ExtResource("2_cx6yb")
 expand_mode = 5
 
 [node name="TitleMargin" type="MarginContainer" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
@@ -58,28 +96,29 @@ text = "Login to your account"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="FormGrid" type="GridContainer" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="EmailLabel" type="Label" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-
-[node name="EmailLabel" type="Label" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer/FormGrid"]
-layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "Email"
 
-[node name="EmailInput" type="LineEdit" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer/FormGrid"]
+[node name="EmailInput" type="LineEdit" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
 placeholder_text = "player@email.com"
 
-[node name="PasswordLabel" type="Label" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer/FormGrid"]
+[node name="PasswordLabel" type="Label" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "Password"
 
-[node name="PasswordInput" type="LineEdit" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer/FormGrid"]
+[node name="PasswordInput" type="LineEdit" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 placeholder_text = "******"
 secret = true
 
@@ -89,22 +128,24 @@ theme_override_constants/margin_top = 30
 
 [node name="ButtonsGrid" type="GridContainer" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer/ButtonsMargin"]
 layout_mode = 2
-theme_override_constants/h_separation = 30
-columns = 2
 
 [node name="LoginButton" type="Button" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer/ButtonsMargin/ButtonsGrid"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
 text = "Log In"
 
 [node name="SignupButton" type="Button" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer/ButtonsMargin/ButtonsGrid"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+theme = SubResource("Theme_eybqk")
 theme_type_variation = &"FlatButton"
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_v12a3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_77jrd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jye2k")
 text = "Sign Up"
 
 [connection signal="pressed" from="Panel/HBoxContainer/MarginContainer/VBoxContainer/ButtonsMargin/ButtonsGrid/LoginButton" to="." method="_on_login_button_pressed"]

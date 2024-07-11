@@ -8,7 +8,6 @@
 [node name="Head" parent="." instance=ExtResource("1_mt1dg")]
 unique_name_in_owner = true
 position = Vector2(64, 96)
-scale = Vector2(0.5, 0.5)
 
 [node name="Tail" parent="." instance=ExtResource("2_qsva0")]
 unique_name_in_owner = true

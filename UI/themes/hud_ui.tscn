@@ -1,15 +1,8 @@
-
-
-[gd_scene load_steps=5 format=3 uid="uid://iuet56tbrxsf"]
-
-
+[gd_scene load_steps=4 format=3 uid="uid://iuet56tbrxsf"]
 
 [ext_resource type="Script" path="res://menus/hud.gd" id="1_8vn3h"]
 
 [sub_resource type="Theme" id="Theme_imh0j"]
-
-[sub_resource type="Theme" id="Theme_go0dn"]
-default_font_size = 16
 
 [sub_resource type="Theme" id="Theme_ihilu"]
 
@@ -24,6 +17,7 @@ grow_horizontal = 2
 theme = SubResource("Theme_imh0j")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -33,31 +27,25 @@ offset_top = -10.5
 offset_bottom = 10.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_right = 10
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_right = 35
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 25
 alignment = 1
 metadata/_edit_use_anchors_ = true
-
-[node name="Timer" type="Label" parent="Panel/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Time: 60"
 
 [node name="Score" type="Label" parent="Panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_ihilu")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
 text = "Score: 0"
 
 [node name="SnakeLength" type="Label" parent="Panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0, 0.972549, 0, 1)
+theme_override_font_sizes/font_size = 15
 text = "Snake Length: 0"

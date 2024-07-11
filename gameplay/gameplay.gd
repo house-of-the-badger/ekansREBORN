@@ -7,6 +7,7 @@ signal level_won
 const gameover_scene:PackedScene = preload("res://UI/game_over_UI.tscn")
 const pausemenu_scene:PackedScene = preload("res://UI/pause_menu_UI.tscn")
 const gamewin_scene:PackedScene = preload("res://menus/game_win.tscn")
+const tutorial_scene:PackedScene = preload("res://menus/tutorial.tscn")
 var tail_scene:PackedScene = preload("res://gameplay/tail.tscn")
 
 

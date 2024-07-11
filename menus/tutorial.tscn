@@ -1,0 +1,231 @@
+[gd_scene load_steps=12 format=3 uid="uid://do4ip64mb4dmt"]
+
+[ext_resource type="Script" path="res://menus/tutorial.gd" id="1_37sam"]
+[ext_resource type="Script" path="res://menus/AnimationPlayer.gd" id="2_6bgeq"]
+[ext_resource type="Texture2D" uid="uid://v3b8dfirgxla" path="res://gameplay/sprites/Asset 11ekans-pixel-art.png" id="3_6qnju"]
+[ext_resource type="Texture2D" uid="uid://tmk02uwjiyk6" path="res://gameplay/sprites/Asset 10ekans-pixel-art.png" id="4_gyxow"]
+[ext_resource type="Texture2D" uid="uid://bppxufup1hadp" path="res://gameplay/sprites/Asset 9ekans-pixel-art.png" id="5_dk2vb"]
+[ext_resource type="Texture2D" uid="uid://bt4j14dfpp1ic" path="res://gameplay/sprites/Asset 12ekans-pixel-art.png" id="6_wbn1v"]
+[ext_resource type="Texture2D" uid="uid://c3ljw254dl7d7" path="res://gameplay/sprites/Asset 8ekans-pixel-art.png" id="7_s212j"]
+[ext_resource type="Texture2D" uid="uid://cpphvxaoh8ix7" path="res://gameplay/sprites/Asset 13ekans-pixel-art.png" id="8_e6085"]
+
+[sub_resource type="Animation" id="Animation_obbva"]
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_rluvi"]
+resource_name = "typing_animation"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jx27w"]
+_data = {
+"RESET": SubResource("Animation_obbva"),
+"typing_animation": SubResource("Animation_rluvi")
+}
+
+[node name="Tutorial" type="CanvasLayer"]
+script = ExtResource("1_37sam")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="Heading" type="Label" parent="Panel/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Tutorial"
+
+[node name="BoxContainer" type="BoxContainer" parent="Panel"]
+layout_mode = 2
+offset_left = 25.0
+offset_top = 105.04
+offset_right = 443.0
+offset_bottom = 305.04
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/BoxContainer"]
+custom_minimum_size = Vector2(418, 200)
+layout_mode = 2
+theme_override_constants/line_separation = 6
+bbcode_enabled = true
+text = "[color=black]Ekans is a reverse snake game, the objective is to get your snake as small as possible to win the level. Avoid collisons with poops and yourself to stay alive![/color]"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/BoxContainer"]
+libraries = {
+"": SubResource("AnimationLibrary_jx27w")
+}
+script = ExtResource("2_6bgeq")
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -209.0
+offset_top = -204.0
+offset_right = 209.0
+offset_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/v_separation = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="Panel/GridContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_6qnju")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Panel/GridContainer/HBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Apples will decrease your length by 1 and score you 10 points!"
+autowrap_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="Panel/GridContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("4_gyxow")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Panel/GridContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Prunes will decrease your length by 3 and score you 20 points!"
+autowrap_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="Panel/GridContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("5_dk2vb")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Panel/GridContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Toilet paper will wipe all poops off the screen, grab it quick!"
+autowrap_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="Panel/GridContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("6_wbn1v")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Panel/GridContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(350, 43)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Avoid mice, they will increase your length by 3"
+autowrap_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="Panel/GridContainer/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("7_s212j")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Panel/GridContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(350, 43)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Dont collide with poop, or you'll lose the game!"
+autowrap_mode = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="Panel/GridContainer/HBoxContainer6"]
+layout_mode = 2
+texture = ExtResource("8_e6085")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Panel/GridContainer/HBoxContainer6"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Dont collide with the snake body, or you'll lose the game!"
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+offset_left = 446.0
+offset_top = 7.0
+offset_right = 470.0
+offset_bottom = 31.0
+text = "X"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

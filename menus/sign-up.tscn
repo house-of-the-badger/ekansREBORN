@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://birea8mlkoq0q" path="res://UI/themes/default_theme.tres" id="1_0l8rw"]
 [ext_resource type="Script" path="res://menus/sign-up.gd" id="1_jw0nw"]
-[ext_resource type="Texture2D" uid="uid://ctifcjlpycxgv" path="res://Assets/avatar_11.png" id="2_opwwj"]
+[ext_resource type="Texture2D" uid="uid://cmcmcn1frjeiq" path="res://gameplay/sprites/Asset 7ekans-pixel-art.png" id="3_nxv4n"]
 
 [node name="SignUp" type="Control"]
 layout_mode = 3
@@ -36,13 +36,14 @@ layout_mode = 2
 theme_override_constants/margin_top = 100
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer/MarginContainer"]
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(200, 2.08165e-12)
 layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_opwwj")
+size_flags_vertical = 0
+texture = ExtResource("3_nxv4n")
 expand_mode = 5
 
 [node name="TitleMargin" type="MarginContainer" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
@@ -54,63 +55,65 @@ theme_override_constants/margin_bottom = 20
 unique_name_in_owner = true
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
 text = "Create your new account"
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="EmailLabel" type="Label" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "Email"
 
 [node name="EmailInput" type="LineEdit" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+theme_override_font_sizes/font_size = 10
 placeholder_text = "player@email.com"
 
 [node name="PasswordLabel1" type="Label" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "Password"
 
 [node name="PasswordInput" type="LineEdit" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+theme_override_font_sizes/font_size = 10
 placeholder_text = "******"
 secret = true
 
 [node name="PasswordLabel2" type="Label" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "Confirm Password"
 
 [node name="PasswrodInput2" type="LineEdit" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+theme_override_font_sizes/font_size = 10
 placeholder_text = "******"
 secret = true
 
-[node name="ButtonsMargin" type="MarginContainer" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_bottom = 15
+theme_override_constants/margin_top = 40
 
-[node name="GridContainer" type="GridContainer" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer/ButtonsMargin"]
-custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+[node name="GridContainer" type="GridContainer" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
-theme_override_constants/h_separation = 30
 
-[node name="SignUpButton" type="Button" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer/ButtonsMargin/GridContainer"]
-custom_minimum_size = Vector2(100, 2.08165e-12)
+[node name="SignUpButton" type="Button" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 16
 text = "Sign Up"
 
-[node name="LoginButton" type="Button" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer/ButtonsMargin/GridContainer"]
-custom_minimum_size = Vector2(100, 2.08165e-12)
+[node name="LoginButton" type="Button" parent="Panel/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 16
 text = "Login instead?"
 
-[connection signal="pressed" from="Panel/HBoxContainer/MarginContainer/VBoxContainer/ButtonsMargin/GridContainer/SignUpButton" to="." method="_on_sign_up_button_pressed"]
-[connection signal="pressed" from="Panel/HBoxContainer/MarginContainer/VBoxContainer/ButtonsMargin/GridContainer/LoginButton" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/SignUpButton" to="." method="_on_sign_up_button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/LoginButton" to="." method="_on_login_button_pressed"]
