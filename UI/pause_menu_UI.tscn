@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://3cc80imerot0"]
+[gd_scene load_steps=6 format=3 uid="uid://3cc80imerot0"]
 
 [ext_resource type="Script" path="res://menus/pause_menu.gd" id="1_eeqwu"]
-
 [ext_resource type="Texture2D" uid="uid://jtk28m7gtmmy" path="res://Assets/cogwheel.png" id="2_1lmqr"]
-
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqr64"]
 bg_color = Color(0.360784, 0.623529, 0.419608, 1)
@@ -40,7 +38,6 @@ expand_margin_left = 40.0
 expand_margin_top = 15.0
 expand_margin_right = 40.0
 expand_margin_bottom = 15.0
-
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
