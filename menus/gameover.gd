@@ -1,7 +1,7 @@
 class_name GameOver extends CanvasLayer
 
 @onready var score: Label = %ScoreLabel 
-@onready var high_score = $Panel/HBoxContainer/VBoxContainer/GridContainer2/HighScoreLabel
+@onready var high_score = $Panel/HBoxContainer/VBoxContainer/GridContainer2/HighScoreLabel #this will need to be changed to a unique name
 @onready var restart: Button = %RestartButton
 @onready var quit: Button = %QuitButton
 

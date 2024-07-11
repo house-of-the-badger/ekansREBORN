@@ -16,17 +16,14 @@ config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/bg_color=Color(1, 1, 1, 1)
 boot_splash/image="res://Assets/house-of-the-badger-logo2-01.png"
 boot_splash/fullsize=false
-config/icon="res://icon.svg"
+config/icon="res://Assets/Asset 18ekans-pixel-art-icon.svg"
 
 [autoload]
 
 Global="*res://autoloads/global.gd"
 Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
 DatabaseManager="*res://autoloads/database_manager.gd"
-
-LevelManager="*res://level_manager.gd"
 Music="*res://autoloads/music.tscn"
-
 
 [display]
 

@@ -40,7 +40,7 @@ var rotation_map = {
 }
 
 #creates an interval in snake movement
-var level = Levels.Database[LevelsManager.current_level]
+var level = Levels.Database[Global.current_level]
 var time_between_moves:float = 1000.0
 var time_since_last_move:float = 0
 var speed:float = level.speed
@@ -124,6 +124,7 @@ func update_snake():
 		gamewin_screen = gamewin_scene.instantiate()
 		add_child(gamewin_screen)
 		gamewin_screen.set_score(score)
+		save_score_to_firestore()
 		level_won.emit()
 	
 func _on_food_eaten():
@@ -199,5 +200,12 @@ func spawn_on_half_length():
 
 func _on_melon_spawn_timer_timeout():
 	spawn_on_half_length()
+	
+func save_score_to_firestore():
+	var auth = Firebase.Auth.auth
+	if auth.localid:
+		DatabaseManager.save_score(auth.localid, score)
+	else:
+		print("User not authenticated")
 
 
