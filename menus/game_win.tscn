@@ -1,6 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://bc0gplf4ea5i7"]
+[gd_scene load_steps=5 format=3 uid="uid://bc0gplf4ea5i7"]
 
 [ext_resource type="Script" path="res://menus/game_win.gd" id="1_v7bcu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvhvb"]
+bg_color = Color(0.360784, 0.623529, 0.419608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.513726, 0.243137, 1)
+expand_margin_left = 40.0
+expand_margin_top = 15.0
+expand_margin_right = 40.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ydy8u"]
+bg_color = Color(0.121569, 0.513726, 0.243137, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.513726, 0.243137, 1)
+expand_margin_left = 40.0
+expand_margin_top = 15.0
+expand_margin_right = 40.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sg1vd"]
+bg_color = Color(0.121569, 0.513726, 0.243137, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.513726, 0.243137, 1)
+expand_margin_left = 40.0
+expand_margin_top = 15.0
+expand_margin_right = 40.0
+expand_margin_bottom = 15.0
 
 [node name="GameWin" type="CanvasLayer"]
 script = ExtResource("1_v7bcu")
@@ -28,7 +64,8 @@ alignment = 1
 
 [node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 60
 text = "You
 Won"
 horizontal_alignment = 1
@@ -36,7 +73,7 @@ horizontal_alignment = 1
 [node name="GridContainer" type="GridContainer" parent="Panel/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/v_separation = 10
+theme_override_constants/v_separation = 20
 
 [node name="LevelScore" type="Label" parent="Panel/HBoxContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
@@ -58,16 +95,22 @@ horizontal_alignment = 1
 [node name="GridContainer2" type="GridContainer" parent="Panel/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/v_separation = 35
 
 [node name="NextLevel" type="Button" parent="Panel/HBoxContainer/VBoxContainer/GridContainer2"]
+unique_name_in_owner = true
 process_mode = 2
 layout_mode = 2
 text = "Next Level"
 
 [node name="Quit" type="Button" parent="Panel/HBoxContainer/VBoxContainer/GridContainer2"]
+unique_name_in_owner = true
 process_mode = 2
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.941176, 0.941176, 0.941176, 1)
+theme_override_colors/font_hover_color = Color(0.941176, 0.941176, 0.941176, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_kvhvb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ydy8u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sg1vd")
 text = "Quit"
 
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/GridContainer2/NextLevel" to="." method="_on_next_level_pressed"]

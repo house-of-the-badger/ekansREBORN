@@ -68,7 +68,7 @@ justification_flags = 162
 [node name="GridContainer2" type="GridContainer" parent="Panel/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/v_separation = 15
+theme_override_constants/v_separation = 20
 
 [node name="ScoreLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer/GridContainer2"]
 unique_name_in_owner = true
