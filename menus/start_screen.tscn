@@ -1,6 +1,42 @@
-[gd_scene load_steps=5 format=3 uid="uid://mrvyj7lo3onn"]
+[gd_scene load_steps=8 format=3 uid="uid://mrvyj7lo3onn"]
 
 [ext_resource type="Script" path="res://menus/start_screen.gd" id="1_3x0iu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bwgh3"]
+bg_color = Color(0.360784, 0.623529, 0.419608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.513726, 0.243137, 1)
+expand_margin_left = 20.0
+expand_margin_top = 15.0
+expand_margin_right = 20.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2sw1g"]
+bg_color = Color(0.121569, 0.513726, 0.243137, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.513726, 0.243137, 1)
+expand_margin_left = 20.0
+expand_margin_top = 15.0
+expand_margin_right = 20.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_itofd"]
+bg_color = Color(0.121569, 0.513726, 0.243137, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.513726, 0.243137, 1)
+expand_margin_left = 20.0
+expand_margin_top = 15.0
+expand_margin_right = 20.0
+expand_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_blunp"]
 bg_color = Color(0.360784, 0.623529, 0.419608, 1)
@@ -81,8 +117,12 @@ text = "Start"
 
 [node name="Tutorial" type="Button" parent="Panel/HBoxContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.941176, 0.941176, 0.941176, 1)
+theme_override_colors/font_hover_color = Color(0.941176, 0.941176, 0.941176, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_bwgh3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2sw1g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_itofd")
 text = "Tutorial
 "
 
