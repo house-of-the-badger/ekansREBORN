@@ -21,7 +21,7 @@ func _on_player_data_changed(data: Dictionary) -> void:
 
 func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://menus/start_screen.tscn")
-	LevelsManager.get_levels_list()
+	#LevelsManager.get_levels_list()
 
 
 func load_images_from_path(path:String) -> void:

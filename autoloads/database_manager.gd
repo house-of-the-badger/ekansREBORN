@@ -32,7 +32,9 @@ func save_score(user_id: String, score: int) -> void:
 	var firestore_collection: FirestoreCollection = Firebase.Firestore.collection(COLLECTION_NAME_PLAYERS)
 	var document = await firestore_collection.get_doc(user_id)
 	if document and not document.is_null_value("score"):
-		document.add_or_update_field("score", score)
+		var current_score = int(document.get_value("score"))
+		var new_score = current_score + score
+		document.add_or_update_field("score", new_score)
 		await firestore_collection.update(document)
 	else:
 		var data: Dictionary = {
