@@ -24,6 +24,7 @@ Global="*res://autoloads/global.gd"
 Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
 DatabaseManager="*res://autoloads/database_manager.gd"
 LevelManager="*res://level_manager.gd"
+Music="*res://autoloads/music.tscn"
 
 [display]
 
