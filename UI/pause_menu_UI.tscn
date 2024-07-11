@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" path="res://menus/pause_menu.gd" id="1_eeqwu"]
 
+[ext_resource type="Texture2D" uid="uid://jtk28m7gtmmy" path="res://Assets/cogwheel.png" id="2_1lmqr"]
+
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqr64"]
 bg_color = Color(0.360784, 0.623529, 0.419608, 1)
 border_width_left = 2
@@ -37,6 +40,7 @@ expand_margin_left = 40.0
 expand_margin_top = 15.0
 expand_margin_right = 40.0
 expand_margin_bottom = 15.0
+
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
@@ -90,5 +94,15 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_74b5n")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_6duct")
 text = "Restart"
 
+[node name="Settings" type="Button" parent="."]
+offset_left = 416.025
+offset_top = 7.0
+offset_right = 1039.03
+offset_bottom = 655.0
+scale = Vector2(0.1, 0.1)
+icon = ExtResource("2_1lmqr")
+flat = true
+
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/GridContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/GridContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]

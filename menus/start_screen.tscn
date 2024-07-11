@@ -79,6 +79,13 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Start"
 
+[node name="Tutorial" type="Button" parent="Panel/HBoxContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Tutorial
+"
+
 [node name="QuitButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -90,4 +97,5 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_4wmxn")
 text = "Quit"
 
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/GridContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/GridContainer/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/GridContainer/QuitButton" to="." method="_on_quit_button_pressed"]

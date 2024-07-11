@@ -1,5 +1,8 @@
 class_name PauseMenu extends CanvasLayer
 
+const tutorial_scene:PackedScene = preload("res://menus/tutorial.tscn")
+
+
 @onready var resume: Button = %ResumeButton
 @onready var restart: Button = %RestartButton
 
@@ -19,3 +22,9 @@ func _notification(what):
 			get_tree().paused = true
 		NOTIFICATION_EXIT_TREE:
 			get_tree().paused = false
+
+
+func _on_settings_pressed():
+	queue_free()
+	var tutorial = tutorial_scene.instantiate()
+	get_parent().add_child(tutorial)
