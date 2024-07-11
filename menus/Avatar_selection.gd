@@ -16,11 +16,10 @@ func _on_confirm_button_pressed():
 
 func update_data():
 	var auth = Firebase.Auth.auth
-	print(avatar_id)
-	print(avatar_img)
-	
 	if auth.localid:
-		print(auth.localid, "local id in avatar selection")
+		print(%Username.text)
+		print(avatar_id)
+		print(typeof(avatar_id), "avatar_selection")
 		await DatabaseManager.update_player_data(auth.localid, %Username.text, avatar_id, avatar_img)
 		%UsernameStateLabel.text = "Your snake was updated"
 	else:
@@ -59,7 +58,7 @@ func _on_avatar_5_pressed():
 
 func _on_avatar_6_pressed():
 	print("selected avatar 06")
-	set_avatar(6, "path/to/avatar_06.png")
+	set_avatar(6, "avatars/avatar_06.png")
 
 func set_avatar(id:int, img_path:String):
 	avatar_id = id

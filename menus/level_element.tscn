@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://3tgrwxb1f2ga"]
-
-[ext_resource type="Script" path="res://level_element.gd" id="1_yjeeg"]
+[gd_scene format=3 uid="uid://cjf5r0it2wn3m"]
 
 [node name="LevelElement" type="VBoxContainer"]
 anchors_preset = 15
@@ -8,24 +6,32 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_yjeeg")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 2
+offset_top = -48.0
+offset_right = 480.0
+offset_bottom = -24.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer"]
 layout_mode = 2
 text = "Level 1"
 
-[node name="Button" type="Button" parent="HBoxContainer"]
+[node name="Button" type="Button" parent="Panel/HBoxContainer"]
 layout_mode = 2
 text = " Play "
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel"]
 layout_mode = 2
+offset_top = -20.0
+offset_right = 480.0
+offset_bottom = -4.0
 
-[node name="Label" type="Label" parent="HBoxContainer2"]
+[node name="Label" type="Label" parent="Panel/HBoxContainer2"]
 layout_mode = 2
 text = "Best Score: 0"
 
-[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Button" to="." method="_on_button_pressed"]
