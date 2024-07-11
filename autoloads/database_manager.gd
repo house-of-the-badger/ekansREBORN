@@ -53,7 +53,7 @@ func update_player_data(user_id: String, username: String, avatar_id: int, avata
 	if document:
 		print("Updating document for user:", user_id)
 		document.add_or_update_field("username", username)
-		document.add_or_update_field("avatar_id", avatar_id)
+		document.add_or_update_field("avatar_id", int(avatar_id))
 		document.add_or_update_field("avatar_img", avatar_img)
 		#document.add_or_update_field("avatar_color", avatar_color)
 		var updated_document = await firestore_collection.update(document)

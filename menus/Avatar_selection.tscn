@@ -74,13 +74,11 @@ layout_mode = 2
 
 [node name="UsernameGrid" type="GridContainer" parent="Panel/HorizontalContainer/VerticalContainer"]
 layout_mode = 2
-theme_override_constants/v_separation = 20
 
 [node name="UsernameStateLabel" type="Label" parent="Panel/HorizontalContainer/VerticalContainer/UsernameGrid"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Give it a name"
-horizontal_alignment = 1
 
 [node name="Username" type="LineEdit" parent="Panel/HorizontalContainer/VerticalContainer/UsernameGrid"]
 unique_name_in_owner = true
@@ -92,11 +90,13 @@ placeholder_text = "Sir Hiss"
 [node name="ConfirmButton" type="Button" parent="Panel/HorizontalContainer/VerticalContainer/UsernameGrid"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 16
 text = "Confirm"
 
 [node name="LogoutButton" type="Button" parent="Panel/HorizontalContainer/VerticalContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 16
 text = "Log Out"
 
 [node name="GetAvatars" type="Node" parent="."]
