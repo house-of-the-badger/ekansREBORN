@@ -1,15 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbhqwu8h032in"]
 
 [ext_resource type="Script" path="res://gameplay/prune.gd" id="1_5jcov"]
-[ext_resource type="Texture2D" uid="uid://nuvy3315y70u" path="res://gameplay/sprites/fig.png" id="1_tfpc3"]
+[ext_resource type="Texture2D" uid="uid://tmk02uwjiyk6" path="res://gameplay/sprites/Asset 10ekans-pixel-art.png" id="2_ochok"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wr8ek"]
+radius = 16.0
 
 [node name="Prune" type="Area2D" groups=["prune"]]
 script = ExtResource("1_5jcov")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_tfpc3")
+texture = ExtResource("2_ochok")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_wr8ek")

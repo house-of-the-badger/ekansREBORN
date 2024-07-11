@@ -17,7 +17,7 @@ func _on_login_button_pressed():
 func on_login_succeeded(auth):
 	%LoginStateLabel.text = "You are logged in!"
 	Firebase.Auth.save_auth(auth)
-	get_tree().change_scene_to_file("res://menus/Avatar_selection.tscn")
+	get_tree().change_scene_to_file("res://menus/user_profile.tscn")
 	
 func on_login_failed(error_code, message):
 	%LoginStateLabel.text = "%s" % message

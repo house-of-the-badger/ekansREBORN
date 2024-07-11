@@ -1,23 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5ddu01jkuif5"]
 
 [ext_resource type="Script" path="res://gameplay/mouse.gd" id="1_x5rye"]
-[ext_resource type="Texture2D" uid="uid://dc7j6xqyordy3" path="res://gameplay/sprites/kisspng-rat-sprite-little-red-and-professor-wolf-common-op-rat-sprite-image-little-red-and-professor-wolf-5bab9f5a1b3e61.6874345715379741061116.png" id="2_nkjik"]
+[ext_resource type="Texture2D" uid="uid://bt4j14dfpp1ic" path="res://gameplay/sprites/Asset 12ekans-pixel-art.png" id="2_vwcuc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i8jal"]
-radius = 32.0624
+radius = 19.0
 
 [node name="Mouse" type="CharacterBody2D" groups=["mouse"]]
 position = Vector2(32, 48)
-scale = Vector2(0.5, 0.5)
 motion_mode = 1
 script = ExtResource("1_x5rye")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(7.00001, -17.1214)
-scale = Vector2(0.183594, 0.198745)
-texture = ExtResource("2_nkjik")
+position = Vector2(2.08165e-12, 2.08165e-12)
+texture = ExtResource("2_vwcuc")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 4)
+position = Vector2(2.08165e-12, 2.08165e-12)
 shape = SubResource("CircleShape2D_i8jal")

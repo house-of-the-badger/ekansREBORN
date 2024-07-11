@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://btidl4n2v5fbu"]
 
-[ext_resource type="Texture2D" uid="uid://o750wvddiiff" path="res://gameplay/sprites/watermelon.png" id="1_ikv46"]
 [ext_resource type="Script" path="res://gameplay/melon.gd" id="1_qpism"]
+[ext_resource type="Texture2D" uid="uid://bppxufup1hadp" path="res://gameplay/sprites/Asset 9ekans-pixel-art.png" id="2_w7e0g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_klp8s"]
 radius = 12.0416
@@ -10,7 +10,7 @@ radius = 12.0416
 script = ExtResource("1_qpism")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ikv46")
+texture = ExtResource("2_w7e0g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_klp8s")
