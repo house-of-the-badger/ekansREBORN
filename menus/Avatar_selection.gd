@@ -34,34 +34,34 @@ func _on_logout_button_pressed():
 
 func _on_avatar_1_pressed():
 	print("selected avatar 01")
-	set_avatar(1, "avatars/avatar_01.png", "yellow")
+	set_avatar(1, "avatars/avatar_01.png")
 
 
 func _on_avatar_2_pressed():
 	print("selected avatar 02")
-	set_avatar(2, "avatars/avatar_02.png", "orange")
+	set_avatar(2, "avatars/avatar_02.png")
 
 
 func _on_avatar_3_pressed():
 	print("selected avatar 03")
-	set_avatar(3, "avatars/avatar_03.png", "green")
+	set_avatar(3, "avatars/avatar_03.png")
 
 
 func _on_avatar_4_pressed():
 	print("selected avatar 04")
-	set_avatar(4, "avatars/avatar_04.png", "purple")
+	set_avatar(4, "avatars/avatar_04.png")
 
 
 func _on_avatar_5_pressed():
 	print("selected avatar 05")
-	set_avatar(5, "avatars/avatar_05.png", "blue")
+	set_avatar(5, "avatars/avatar_05.png")
 
 
 func _on_avatar_6_pressed():
 	print("selected avatar 06")
-	set_avatar(6, "path/to/avatar_06.png", "pink")
+	set_avatar(6, "path/to/avatar_06.png")
 
-func set_avatar(id:int, img_path:String, _avatar_color:String):
+func set_avatar(id:int, img_path:String):
 	avatar_id = id
 	avatar_img = img_path
 	

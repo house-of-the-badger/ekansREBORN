@@ -1,6 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://mrvyj7lo3onn"]
+[gd_scene load_steps=5 format=3 uid="uid://mrvyj7lo3onn"]
 
 [ext_resource type="Script" path="res://menus/start_screen.gd" id="1_3x0iu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_blunp"]
+bg_color = Color(0.360784, 0.623529, 0.419608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.513726, 0.243137, 1)
+expand_margin_left = 20.0
+expand_margin_top = 15.0
+expand_margin_right = 20.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6bx5s"]
+bg_color = Color(0.121569, 0.513726, 0.243137, 1)
+expand_margin_left = 20.0
+expand_margin_top = 15.0
+expand_margin_right = 20.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wmxn"]
+bg_color = Color(0.121569, 0.513726, 0.243137, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.513726, 0.243137, 1)
+expand_margin_left = 20.0
+expand_margin_top = 15.0
+expand_margin_right = 20.0
+expand_margin_bottom = 14.0
 
 [node name="StartScreen" type="CanvasLayer"]
 script = ExtResource("1_3x0iu")
@@ -28,25 +59,23 @@ alignment = 1
 
 [node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 84
-text = "SNAKE 
-GAME"
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 60
+text = "EKANS"
 horizontal_alignment = 1
 
 [node name="ScoreLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "High Score: 0"
+text = "Highest Score: 0"
 horizontal_alignment = 1
 
 [node name="GridContainer" type="GridContainer" parent="Panel/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/v_separation = 20
 
 [node name="StartButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 text = "Start"
 
@@ -59,8 +88,12 @@ text = "Tutorial
 
 [node name="QuitButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.941176, 0.941176, 0.941176, 1)
+theme_override_colors/font_hover_color = Color(0.941176, 0.941176, 0.941176, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_blunp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6bx5s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4wmxn")
 text = "Quit"
 
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/GridContainer/StartButton" to="." method="_on_start_button_pressed"]

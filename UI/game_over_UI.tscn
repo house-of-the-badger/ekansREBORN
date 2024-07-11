@@ -1,20 +1,47 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5tm4qoj80lpt"]
+[gd_scene load_steps=6 format=3 uid="uid://b5tm4qoj80lpt"]
 
 [ext_resource type="Script" path="res://menus/gameover.gd" id="1_33y3e"]
+[ext_resource type="Theme" uid="uid://birea8mlkoq0q" path="res://UI/themes/default_theme.tres" id="2_y387y"]
 
-[sub_resource type="Theme" id="Theme_qo3rq"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07y68"]
+bg_color = Color(0.360784, 0.623529, 0.419608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.513726, 0.243137, 1)
+expand_margin_left = 40.0
+expand_margin_top = 15.0
+expand_margin_right = 40.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7x4of"]
+bg_color = Color(0.121569, 0.513726, 0.243137, 1)
+expand_margin_left = 40.0
+expand_margin_top = 15.0
+expand_margin_right = 40.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxa6v"]
+bg_color = Color(0.121569, 0.513726, 0.243137, 1)
+expand_margin_left = 40.0
+expand_margin_top = 15.0
+expand_margin_right = 40.0
+expand_margin_bottom = 15.0
+
 
 [node name="GameOver" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_33y3e")
 
 [node name="Panel" type="Panel" parent="."]
-modulate = Color(1, 1, 1, 0.756863)
+self_modulate = Color(1, 1, 1, 0.870588)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_y387y")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -32,11 +59,8 @@ alignment = 1
 
 [node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme = SubResource("Theme_qo3rq")
-theme_override_colors/font_color = Color(0.00392157, 0.188235, 0.0117647, 1)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 4
-theme_override_font_sizes/font_size = 92
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 60
 text = "GAME
 OVER"
 horizontal_alignment = 1
@@ -45,7 +69,7 @@ justification_flags = 162
 [node name="GridContainer2" type="GridContainer" parent="Panel/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/v_separation = 10
+theme_override_constants/v_separation = 20
 
 [node name="ScoreLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer/GridContainer2"]
 unique_name_in_owner = true
@@ -54,7 +78,6 @@ text = "Score: 0"
 horizontal_alignment = 1
 
 [node name="HighScoreLabel" type="Label" parent="Panel/HBoxContainer/VBoxContainer/GridContainer2"]
-unique_name_in_owner = true
 layout_mode = 2
 text = "New High Score!"
 horizontal_alignment = 1
@@ -62,19 +85,20 @@ horizontal_alignment = 1
 [node name="GridContainer" type="GridContainer" parent="Panel/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/h_separation = 5
-theme_override_constants/v_separation = 20
 
 [node name="RestartButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 text = "Restart"
 
 [node name="QuitButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.941176, 0.941176, 0.941176, 1)
+theme_override_colors/font_hover_color = Color(0.941176, 0.941176, 0.941176, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_07y68")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7x4of")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uxa6v")
 text = "Quit"
 
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/GridContainer/RestartButton" to="." method="_on_restart_button_pressed"]
