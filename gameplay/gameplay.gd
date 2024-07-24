@@ -79,9 +79,16 @@ func _on_swipe(direction: Vector2):
 		head.rotation_degrees = rotation_map[direction]
 	
 func initialize_snake():
-	var starting_snake_length = level.starting_length	
-	spawner.call_deferred("spawn_tail", snake_parts[snake_parts.size()-1].last_position, starting_snake_length)
-
+	var starting_snake_length = level.starting_length
+	for i in range(starting_snake_length):
+		var tail: Tail = tail_scene.instantiate() as Tail
+		var position_offset = Vector2(0, Global.CELL_SIZE * (i + 1))
+		tail.position = head.position + position_offset
+		tail.last_position = tail.position
+		snake_parts.push_back(tail)
+		add_child(tail)
+		
+		#spawner.emit_signal("tail_added", tail) # Signal to update the HUD or other components
 
 func _process(_delta) -> void:
 	if Input.is_action_just_pressed("ui_up"):
@@ -110,8 +117,10 @@ func update_snake():
 	var new_position:Vector2 = head.position + move_dir * Global.CELL_SIZE #size of grid cell, set in global script
 	new_position = bounds.wrap_vector(new_position)
 	head.move_to(new_position) 
-	for i in range(1, snake_parts.size(), 1):
-		snake_parts[i].move_to(snake_parts[i-1].last_position) #this ensures that the tail follows the head
+		# Move the rest of the snake parts
+	for i in range(1, snake_parts.size()):
+		snake_parts[i].move_to(snake_parts[i - 1].last_position)
+
 	moves_counter += 1
 	if(moves_counter % pooping_speed == 0):
 		score += 1
