@@ -1,11 +1,9 @@
-res://UI/pause_menu_UI.tscn
-res://UI/themes/default_theme.tres
-res://menus/start_screen.tscn
-res://gameplay/gameplay.tscn
-res://menus/tutorial.tscn
 res://gameplay/tail.tscn
-res://gameplay/gameplay.gd
+res://UI/themes/default_theme.tres
+res://menus/tutorial.tscn
 res://gameplay/prune.tscn
 res://gameplay/snake_parts.tscn
 res://gameplay/head.tscn
-res://gameplay/spawner.gd
+res://gameplay/gameplay.gd
+res://gameplay/gameplay.tscn
+res://autoloads/global.gd

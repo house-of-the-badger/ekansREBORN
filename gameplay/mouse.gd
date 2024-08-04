@@ -3,7 +3,7 @@ class_name Mouse extends CharacterBody2D
 signal spawn_mouse
 
 
-const SPEED = 75
+const SPEED = 0
 
 var motion = Vector2()
 var gravity = 0

@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1721840781
+::res://::1722175676
 default_bus_layout.tres::AudioBusLayout::3550879468058951545::1721741706::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1721741706::0::1::::<><>::
 gameplay.tscn::PackedScene::4560526325607509509::1721741706::0::1::::<><>::res://gameplay/gameplay.gd<>uid://cgwqd5x5g07yl::::res://gameplay/sprites/poop.png<>uid://bss23e1ose6yb::::res://gameplay/head.tscn<>res://gameplay/bounds.gd<>uid://iuet56tbrxsf::::res://UI/themes/hud_ui.tscn<>uid://bv0ydxix6xyfr::::res://Assets/new_grid.png<>res://gameplay/spawner.gd<>res://gameplay/swiping_detector.gd<>res://gameplay/MouseSpawnTimer.gd<>res://gameplay/PoopDespawnTimer.gd<>res://gameplay/MelonSpawnTimer.gd
@@ -187,9 +187,9 @@ new_grid.png::CompressedTexture2D::3913459630634247075::1721741706::1721741791::
 ::res://Assets/tutorial_images/::1721741791
 Screenshot from 2024-07-10 11-11-07.png::CompressedTexture2D::4891392119573870694::1721741706::1721741791::1::::<><>::
 Screenshot from 2024-07-10 11-58-17.png::CompressedTexture2D::6903529098511976310::1721741706::1721741791::1::::<><>::
-::res://autoloads/::1721741706
+::res://autoloads/::1722167522
 database_manager.gd::GDScript::-1::1721741706::0::1::::<>Node<>::
-global.gd::GDScript::-1::1721741706::0::1::::<>Node<>::
+global.gd::GDScript::-1::1722167522::0::1::::<>Node<>::
 levels_manager.gd::GDScript::-1::1721741706::0::1::::<>Node<>::
 music.tscn::PackedScene::16410113084749660::1721741706::0::1::::<><>::uid://b6ohrxlsarxip::::res://music/background-music.ogg
 ::res://data/::1721741706
@@ -197,29 +197,29 @@ levels.gd::GDScript::-1::1721741706::0::1::::Levels<>RefCounted<>::
 savedata.gd::GDScript::-1::1721741706::0::1::::SaveData<>Resource<>::
 ::res://export/::1721741706
 export_presets.cfg::TextFile::-1::1721741706::0::1::::<><>::
-::res://gameplay/::1721839808
+::res://gameplay/::1722167870
 bounds.gd::GDScript::-1::1721741706::0::1::::Bounds<>Node2D<>::
 food.gd::GDScript::-1::1721741706::0::1::::Food<>Area2D<>::
 food.tscn::PackedScene::2058350417972370958::1721741706::0::1::::<><>::res://gameplay/food.gd<>uid://v3b8dfirgxla::::res://gameplay/sprites/Asset 11ekans-pixel-art.png
-gameplay.gd::GDScript::-1::1721839808::0::1::::Gameplay<>Node2D<>::
-gameplay.tscn::PackedScene::549745190788890721::1721834113::0::1::::<><>::res://gameplay/gameplay.gd<>uid://bss23e1ose6yb::::res://gameplay/head.tscn<>uid://c3ljw254dl7d7::::res://gameplay/sprites/Asset 8ekans-pixel-art.png<>res://gameplay/bounds.gd<>uid://tarxs1ef3aff::::res://gameplay/sprites/Asset 17ekans-pixel-art.png<>uid://iuet56tbrxsf::::res://UI/themes/hud_ui.tscn<>res://gameplay/spawner.gd<>res://gameplay/swiping_detector.gd<>res://gameplay/MouseSpawnTimer.gd<>res://gameplay/PoopDespawnTimer.gd<>res://gameplay/MelonSpawnTimer.gd
-head.gd::GDScript::-1::1721741706::0::1::::Head<>SnakeParts<>::
-head.tscn::PackedScene::3688668280703450797::1721741706::0::1::::<><>::res://gameplay/head.gd<>uid://bsskjwsssm6wm::::res://gameplay/sprites/Asset 14ekans-pixel-art.png
+gameplay.gd::GDScript::-1::1722167842::0::1::::Gameplay<>Node2D<>::
+gameplay.tscn::PackedScene::549745190788890721::1722167870::0::1::::<><>::res://gameplay/gameplay.gd<>uid://bss23e1ose6yb::::res://gameplay/head.tscn<>uid://c3ljw254dl7d7::::res://gameplay/sprites/Asset 8ekans-pixel-art.png<>res://gameplay/bounds.gd<>uid://tarxs1ef3aff::::res://gameplay/sprites/Asset 17ekans-pixel-art.png<>uid://iuet56tbrxsf::::res://UI/themes/hud_ui.tscn<>res://gameplay/spawner.gd<>res://gameplay/swiping_detector.gd<>res://gameplay/MouseSpawnTimer.gd<>res://gameplay/PoopDespawnTimer.gd<>res://gameplay/MelonSpawnTimer.gd
+head.gd::GDScript::-1::1721991864::0::1::::Head<>SnakeParts<>::
+head.tscn::PackedScene::3688668280703450797::1722167870::0::1::::<><>::res://gameplay/head.gd<>uid://bsskjwsssm6wm::::res://gameplay/sprites/Asset 14ekans-pixel-art.png
 melon.gd::GDScript::-1::1721741706::0::1::::<>Area2D<>::
 melon.tscn::PackedScene::3736727074075063850::1721741706::0::1::::<><>::res://gameplay/melon.gd<>uid://bppxufup1hadp::::res://gameplay/sprites/Asset 9ekans-pixel-art.png
 MelonSpawnTimer.gd::GDScript::-1::1721741706::0::1::::<>Timer<>::
-mouse.gd::GDScript::-1::1721741706::0::1::::Mouse<>CharacterBody2D<>::
+mouse.gd::GDScript::-1::1721991055::0::1::::Mouse<>CharacterBody2D<>::
 mouse.tscn::PackedScene::6884919030317496392::1721741706::0::1::::<><>::res://gameplay/mouse.gd<>uid://bt4j14dfpp1ic::::res://gameplay/sprites/Asset 12ekans-pixel-art.png
 MouseSpawnTimer.gd::GDScript::-1::1721741706::0::1::::<>Timer<>::
 PoopDespawnTimer.gd::GDScript::-1::1721741706::0::1::::<>Timer<>::
 prune.gd::GDScript::-1::1721741706::0::1::::Prune<>Area2D<>::
-prune.tscn::PackedScene::4858492716450961049::1721741706::0::1::::<><>::res://gameplay/prune.gd<>uid://tmk02uwjiyk6::::res://gameplay/sprites/Asset 10ekans-pixel-art.png
+prune.tscn::PackedScene::4858492716450961049::1722167870::0::1::::<><>::res://gameplay/prune.gd<>uid://tmk02uwjiyk6::::res://gameplay/sprites/Asset 10ekans-pixel-art.png
 snake_parts.gd::GDScript::-1::1721741706::0::1::::SnakeParts<>Area2D<>::
-snake_parts.tscn::PackedScene::6627226070732603278::1721832862::0::1::::<><>::uid://bss23e1ose6yb::::res://gameplay/head.tscn<>uid://cxmdq0ko3w812::::res://gameplay/tail.tscn
-spawner.gd::GDScript::-1::1721839808::0::1::::Spawner<>Node2D<>::
+snake_parts.tscn::PackedScene::6627226070732603278::1722167870::0::1::::<><>::uid://bss23e1ose6yb::::res://gameplay/head.tscn
+spawner.gd::GDScript::-1::1721843809::0::1::::Spawner<>Node2D<>::
 swiping_detector.gd::GDScript::-1::1721741706::0::1::::<>Camera2D<>::
 tail.gd::GDScript::-1::1721832862::0::1::::Tail<>SnakeParts<>::
-tail.tscn::PackedScene::6412169356996656835::1721832862::0::1::::<><>::res://gameplay/tail.gd<>uid://c3ljw254dl7d7::::res://gameplay/sprites/Asset 8ekans-pixel-art.png<>uid://cpphvxaoh8ix7::::res://gameplay/sprites/Asset 13ekans-pixel-art.png
+tail.tscn::PackedScene::6412169356996656835::1722167870::0::1::::<><>::res://gameplay/tail.gd<>uid://c3ljw254dl7d7::::res://gameplay/sprites/Asset 8ekans-pixel-art.png<>uid://cpphvxaoh8ix7::::res://gameplay/sprites/Asset 13ekans-pixel-art.png
 ::res://gameplay/sprites/::1721741791
 apple.png::CompressedTexture2D::4542838929558155604::1721741706::1721741706::1::::<><>::
 Asset 1ekans-pixel-art.png::CompressedTexture2D::724153664997269959::1721741706::1721741791::1::::<><>::
@@ -256,7 +256,7 @@ snake-head-up-down.png::CompressedTexture2D::4004867236934753912::1721741706::17
 snake-head-up.png::CompressedTexture2D::402336317464703618::1721741706::1721741706::1::::<><>::
 snake-tail.png::CompressedTexture2D::2415559638780582748::1721741706::1721741706::1::::<><>::
 watermelon.png::CompressedTexture2D::1050571241788217567::1721741706::1721741706::1::::<><>::
-::res://menus/::1721834113
+::res://menus/::1722167870
 AnimationPlayer.gd::GDScript::-1::1721741706::0::1::::<>AnimationPlayer<>::
 Avatar_selection.gd::GDScript::-1::1721741706::0::1::::AvatarSelection<>Control<>::
 Avatar_selection.tscn::PackedScene::958840474859546549::1721741706::0::1::::<><>::res://menus/Avatar_selection.gd<>res://menus/get_avatars.gd
@@ -276,14 +276,14 @@ pause_menu.gd::GDScript::-1::1721741706::0::1::::PauseMenu<>CanvasLayer<>::
 sign-up.gd::GDScript::-1::1721741706::0::1::::SignUp<>Control<>::
 sign-up.tscn::PackedScene::2822807125659096026::1721741706::0::1::::<><>::uid://birea8mlkoq0q::::res://UI/themes/default_theme.tres<>res://menus/sign-up.gd<>uid://cmcmcn1frjeiq::::res://gameplay/sprites/Asset 7ekans-pixel-art.png
 start_screen.gd::GDScript::-1::1721741706::0::1::::StartScreen<>CanvasLayer<>::
-start_screen.tscn::PackedScene::878678984040726175::1721834113::0::1::::<><>::res://menus/start_screen.gd
+start_screen.tscn::PackedScene::878678984040726175::1721845778::0::1::::<><>::res://menus/start_screen.gd
 tutorial.gd::GDScript::-1::1721741706::0::1::::<>CanvasLayer<>::
-tutorial.tscn::PackedScene::8202287013301082863::1721834113::0::1::::<><>::res://menus/tutorial.gd<>res://menus/AnimationPlayer.gd<>uid://v3b8dfirgxla::::res://gameplay/sprites/Asset 11ekans-pixel-art.png<>uid://tmk02uwjiyk6::::res://gameplay/sprites/Asset 10ekans-pixel-art.png<>uid://bppxufup1hadp::::res://gameplay/sprites/Asset 9ekans-pixel-art.png<>uid://bt4j14dfpp1ic::::res://gameplay/sprites/Asset 12ekans-pixel-art.png<>uid://c3ljw254dl7d7::::res://gameplay/sprites/Asset 8ekans-pixel-art.png<>uid://cpphvxaoh8ix7::::res://gameplay/sprites/Asset 13ekans-pixel-art.png
+tutorial.tscn::PackedScene::8202287013301082863::1722167870::0::1::::<><>::res://menus/tutorial.gd<>res://menus/AnimationPlayer.gd<>uid://v3b8dfirgxla::::res://gameplay/sprites/Asset 11ekans-pixel-art.png<>uid://tmk02uwjiyk6::::res://gameplay/sprites/Asset 10ekans-pixel-art.png<>uid://bppxufup1hadp::::res://gameplay/sprites/Asset 9ekans-pixel-art.png<>uid://bt4j14dfpp1ic::::res://gameplay/sprites/Asset 12ekans-pixel-art.png<>uid://c3ljw254dl7d7::::res://gameplay/sprites/Asset 8ekans-pixel-art.png<>uid://cpphvxaoh8ix7::::res://gameplay/sprites/Asset 13ekans-pixel-art.png
 user_profile.gd::GDScript::-1::1721741706::0::1::::UserProfile<>Control<>::
 user_profile.tscn::PackedScene::6686148356155229688::1721741706::0::1::::<><>::res://menus/user_profile.gd<>uid://birea8mlkoq0q::::res://UI/themes/default_theme.tres
 ::res://music/::1721741791
 background-music.ogg::AudioStreamOggVorbis::4591632728323124867::1721741706::1721741791::1::::<><>::
-::res://screenshots/::1721840764
+::res://screenshots/::1721840782
 ekans-scrren-grab.png::CompressedTexture2D::8822681431872721946::1721741706::1721840782::1::::<><>::
 ::res://tests/::1721741706
 UI_updates_tests.gd::GDScript::-1::1721741706::0::1::::<>Node<>::
@@ -298,11 +298,11 @@ test_movement.gd::GDScript::-1::1721741706::0::1::::<>Node<>::
 test_score_calculation.gd::GDScript::-1::1721741706::0::1::::<>Node<>::
 test_spawning.gd::GDScript::-1::1721741706::0::1::::<>Node<>::
 test_winning.gd::GDScript::-1::1721741706::0::1::::<>Node<>::
-::res://UI/::1721834113
+::res://UI/::1722077326
 game_over_UI.tscn::PackedScene::4532090424552525749::1721741706::0::1::::<><>::res://menus/gameover.gd<>uid://birea8mlkoq0q::::res://UI/themes/default_theme.tres
-pause_menu_UI.tscn::PackedScene::1969598068550865183::1721834113::0::1::::<><>::res://menus/pause_menu.gd<>uid://jtk28m7gtmmy::::res://Assets/cogwheel.png
+pause_menu_UI.tscn::PackedScene::1969598068550865183::1722077326::0::1::::<><>::res://menus/pause_menu.gd<>uid://jtk28m7gtmmy::::res://Assets/cogwheel.png
 ::res://UI/fonts/::1721741791
 PressStart2P-Regular.ttf::FontFile::5215172588916738381::1721741706::1721741791::1::::<><>::
-::res://UI/themes/::1721832892
-default_theme.tres::Theme::2983270474909372562::1721832892::0::1::::<><>::uid://cgkjeo73n06m8::::res://UI/fonts/PressStart2P-Regular.ttf
+::res://UI/themes/::1722165311
+default_theme.tres::Theme::2983270474909372562::1722165311::0::1::::<><>::uid://cgkjeo73n06m8::::res://UI/fonts/PressStart2P-Regular.ttf
 hud_ui.tscn::PackedScene::603076726695459453::1721741706::0::1::::<><>::res://menus/hud.gd
