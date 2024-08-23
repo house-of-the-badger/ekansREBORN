@@ -39,12 +39,13 @@ var rotation_map = {
 	DIRECTION_DOWN: ROTATION_DOWN
 }
 
-#creates an interval in snake movement
+
 var level = Levels.Database[Global.current_level]
 var time_between_moves:float = 1000.0
 var time_since_last_move:float = 0
 var speed:float = level.speed
 var pooping_speed = 10
+var tail: Tail
 # sets moving direction at the start of game. most games start with the character moving left to right, we chose to start the character moving up as it's a mobile game
 
 var next_move_dir:Vector2 = Vector2.UP
@@ -53,6 +54,7 @@ var moves_counter:int = 0
 var pause_menu:PauseMenu
 var gameover_menu:GameOver
 var gamewin_screen
+var starting_snake_length = level.starting_length
 var score:int:
 	get:
 		return score
@@ -70,7 +72,7 @@ func _ready() -> void:
 	spawner.tail_added.connect(_on_tail_added)
 	time_since_last_move = time_between_moves
 	snake_parts.push_front(head)
-	initialize_snake()
+	initialize_snake(starting_snake_length, head.position)
 	spawner.spawn_food()
 
 func _on_swipe(direction: Vector2):
@@ -78,10 +80,17 @@ func _on_swipe(direction: Vector2):
 		next_move_dir = direction
 		head.rotation_degrees = rotation_map[direction]
 	
-func initialize_snake():
-	var starting_snake_length = level.starting_length	
-	spawner.call_deferred("spawn_tail", snake_parts[snake_parts.size()-1].last_position, starting_snake_length)
-
+func initialize_snake(tail_length, starting_position):
+	for i in range(tail_length):
+		tail = tail_scene.instantiate() as Tail
+		var position_offset = Vector2(0, Global.CELL_SIZE * (i + 1))
+		#tail.position = head.position + position_offset
+		#snake_parts[snake_parts.size()-1].position 
+		tail.position = starting_position + position_offset
+		tail.last_position = tail.position
+		snake_parts.push_back(tail)
+		
+		add_child(tail)
 
 func _process(_delta) -> void:
 	if Input.is_action_just_pressed("ui_up"):
@@ -110,8 +119,10 @@ func update_snake():
 	var new_position:Vector2 = head.position + move_dir * Global.CELL_SIZE #size of grid cell, set in global script
 	new_position = bounds.wrap_vector(new_position)
 	head.move_to(new_position) 
-	for i in range(1, snake_parts.size(), 1):
-		snake_parts[i].move_to(snake_parts[i-1].last_position) #this ensures that the tail follows the head
+		# Move the rest of the snake parts
+	for i in range(1, snake_parts.size()):
+		snake_parts[i].move_to(snake_parts[i - 1].last_position)
+
 	moves_counter += 1
 	if(moves_counter % pooping_speed == 0):
 		score += 1
@@ -176,9 +187,11 @@ func _on_hud_decrease_snake_length():
 func _on_mouse_spawn_timer_timeout():
 	return spawner.spawn_enemy()
 
-func _on_head_mouse_eaten():
-	spawner.call_deferred("spawn_tail", snake_parts[snake_parts.size()-1].last_position, 3)
+func _on_head_mouse_eaten(tail_addition):
+	initialize_snake(tail_addition, snake_parts[snake_parts.size()-1].last_position)
+	#spawner.call_deferred("spawn_tail", snake_parts[snake_parts.size()-1].last_position, 3)
 	increase_snake_length.emit()
+	print(snake_parts.size())
 
 func _on_poop_despawn_timer_timeout():
 	if poop_array.size() > 1:

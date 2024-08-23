@@ -6,7 +6,7 @@ var save_data:SaveData
 
 var counter = 0
 
-var current_level = "level1"
+var current_level = "level4"
 var starting_snake_length = Levels.Database[current_level].starting_length
 
 func _ready():

@@ -18,9 +18,9 @@ func _on_area_entered(area):
 	else:
 		_handle_tail_collision()
 
-func _on_body_entered(body):
-	mouse_eaten.emit()
-	body.queue_free()
+func _on_body_entered(mouse):
+	mouse_eaten.emit(3)
+	mouse.queue_free()
 
 func _handle_food_collision(area):
 	food_eaten.emit()
